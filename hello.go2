@@ -1,0 +1,11 @@
+package main
+
+import "fmt"
+
+func printGeneric[T any](msg T) {
+	fmt.Println(msg)
+}
+
+func main() {
+	printGeneric("Hello, generics.")
+}

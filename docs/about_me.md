@@ -1,7 +1,7 @@
-## Damien 
+# Damien Stanton
 
 - `@damienstanton` on GitHub, LinkedIn, and most other social media
-- Senior SWE at an IoT startup in DC (https://signalframe.com)
+- Senior SWE at an IoT startup in DC called [signalframe](https://signalframe.com)
 
 My background:
 - Been in the industry for around a decade

@@ -2,10 +2,13 @@ package main
 
 import "fmt"
 
-func printGeneric[T any](msg T) {
-	fmt.Println(msg)
+func Print[T any](s []T) {
+	for _, v := range s {
+		fmt.Print(v)
+	}
 }
 
 func main() {
-	printGeneric("Hello, generics.")
+	Print([]string{"Hello, ", "playground\n"})
+	Print([]int{1,2,3})
 }

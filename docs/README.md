@@ -5,6 +5,11 @@ What are generics?
 
 _Elements of Programming, Stepanov & McJones 2009_
 
+Go interfaces as a set abstraction
+---
+
+![](https://f001.backblazeb2.com/file/dks-public/interface.png)
+
 Takeaways
 ---
 
@@ -20,6 +25,15 @@ Takeaways
 - Using a generic function or type requires passing type arguments.
 - Type inference permits omitting the type arguments of a function call in common cases.
 
+Helpful Links
+---
+
+- [The wikipedia entry on generics (actually quite good)][3]
+- [The full Go generics draft design document by Ian Lance Taylor and Robert Griesemer][1]
+- [The `go2go` playground online][2]
+- Installing the `go2go` branch on your local machine: Follow the steps listed [here][4], but checkout the branch `dev.go2go`
+- Phil Wadler's [paper][5] and a [Zoom talk][6] on "Featherweight Go", the theoretical basis for generics in Go
+
 Comparison to other languages
 ---
 
@@ -34,19 +48,13 @@ C++ templates do not enforce any constraints on the type arguments (unless the c
 ## 🦀 Rust
 The generics described in this design are similar to generics in Rust. One difference is that in Rust the association between a trait bound and a type must be defined explicitly, either in the crate that defines the trait bound or the crate that defines the type. In Go terms, this would mean that we would have to declare somewhere whether a type satisfied a constraint. Just as Go types can satisfy Go interfaces without an explicit declaration, in this design Go type arguments can satisfy a constraint without an explicit declaration. Where this design uses type lists, the Rust standard library defines standard traits for operations like comparison. These standard traits are automatically implemented by Rust's primitive types, and can be implemented by user defined types as well. Rust provides a fairly extensive list of traits, at least 34, covering all of the operators. Rust supports type parameters on methods, which this design does not.
 
-## Helpful Links
-
-- [The wikipedia entry on generics (actually quite good)][3]
-- [The full Go generics draft design document by Ian Lance Taylor and Robert Griesemer][1]
-- [The `go2go` playground online][2]
-- Installing the `go2go` branch on your local machine: Follow the steps listed [here][4], but checkout the branch `dev.go2go`
-
 
 [1]: https://go.googlesource.com/proposal/+/refs/heads/master/design/go2draft-type-parameters.md
 [2]: https://go2goplay.golang.org/
 [3]: https://en.wikipedia.org/wiki/Generic_programming
 [4]: https://golang.org/doc/install/source
-
+[5]: https://dl.acm.org/doi/pdf/10.1145/3428217
+[6]: https://youtu.be/Dq0WFigax_c
 
 © 2021 Damien Stanton
 
